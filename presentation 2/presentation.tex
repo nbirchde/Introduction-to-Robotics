@@ -25,10 +25,13 @@ Jana\'{\i}na da Silva Pacheco (IST1117233)}
 \institute{Instituto Superior Técnico}
 \date{September 24, 2025}
 
-% Title graphic (IST/Técnico logo) — tries common filenames; skips if not found
-\IfFileExists{Tecnico Lisbon Logo.jpg}{\titlegraphic{\includegraphics[height=1.2cm]{Tecnico Lisbon Logo.jpg}}}{%%
-\IfFileExists{tecnico.jpg}{\titlegraphic{\includegraphics[height=1.2cm]{tecnico.jpg}}}{%%
-\IfFileExists{logo.jpg}{\titlegraphic{\includegraphics[height=1.2cm]{logo.jpg}}}{}}}
+% Title graphic (IST/Técnico logo) — tries common filenames and sibling folders; skips if not found
+\IfFileExists{Tecnico Lisbon Logo.jpg}{\titlegraphic{\includegraphics[height=1.6cm]{Tecnico Lisbon Logo.jpg}}}{%%
+\IfFileExists{Tecnico Lisbon Logo.png}{\titlegraphic{\includegraphics[height=1.6cm]{Tecnico Lisbon Logo.png}}}{%%
+\IfFileExists{tecnico.jpg}{\titlegraphic{\includegraphics[height=1.6cm]{tecnico.jpg}}}{%%
+\IfFileExists{logo.jpg}{\titlegraphic{\includegraphics[height=1.6cm]{logo.jpg}}}{%%
+\IfFileExists{../presentation 1/Tecnico Lisbon Logo.jpg}{\titlegraphic{\includegraphics[height=1.6cm]{../presentation 1/Tecnico Lisbon Logo.jpg}}}{%%
+\IfFileExists{../presentation 1/tecnico.jpg}{\titlegraphic{\includegraphics[height=1.6cm]{../presentation 1/tecnico.jpg}}}{}}}}}}
 
 \begin{document}
 
@@ -76,12 +79,11 @@ Jana\'{\i}na da Silva Pacheco (IST1117233)}
 \end{frame}
 
 \begin{frame}{Trajectories vs Ground Truth}
-\begin{center}
+\centering
 \IfFileExists{gt_compare.png}{\includegraphics[width=0.9\textwidth]{gt_compare.png}}{\textit{[Insert trajectory plot: mocap (black), odom (orange), filtered (red)]}}
 
 \vspace{2mm}
-{\scriptsize Fixed Frame: \texttt{odom}; Data source: recorded rosbag from the TurtleBot3}}
-\end{center}
+{\scriptsize Fixed Frame: \texttt{odom}; Data source: recorded rosbag from the TurtleBot3}
 \end{frame}
 
 % Step 2: Mapping
@@ -98,7 +100,7 @@ Jana\'{\i}na da Silva Pacheco (IST1117233)}
 
 \begin{frame}{Resulting Map (Preview)}
 \begin{center}
-\IfFileExists{map.png}{\includegraphics[width=0.88\textwidth]{map.png}}{\textit{[Insert occupancy grid screenshot with robot trajectory]}}
+\IfFileExists{Chat with Nicholas.png}{\includegraphics[width=0.88\textwidth]{Chat with Nicholas.png}}{\IfFileExists{map.png}{\includegraphics[width=0.88\textwidth]{map.png}}{\textit{[Insert occupancy grid screenshot with robot trajectory]}}}
 
 \vspace{2mm}
 {\scriptsize Resolution: \textit{[fill in]} m/px; Area covered: \textit{[fill in]} m$^2$; Loop closures: \textit{[observed/rare]}}

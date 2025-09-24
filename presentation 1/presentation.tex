@@ -27,10 +27,12 @@ Jana\'{\i}na da Silva Pacheco (IST1117233)}
 \institute{Instituto Superior Técnico}
 \date{September 18, 2025}
 
-% Title graphic (IST/Técnico logo). Tries a few common filenames; skips if not found.
-\IfFileExists{Tecnico Lisbon Logo.jpg}{\titlegraphic{\includegraphics[height=1.2cm]{Tecnico Lisbon Logo.jpg}}}{%
-\IfFileExists{tecnico.jpg}{\titlegraphic{\includegraphics[height=1.2cm]{tecnico.jpg}}}{%
-\IfFileExists{logo.jpg}{\titlegraphic{\includegraphics[height=1.2cm]{logo.jpg}}}{}}}
+% Title graphic (IST/Técnico logo). Tries common filenames and sibling folder; skips if not found.
+\IfFileExists{Tecnico Lisbon Logo.jpg}{\titlegraphic{\includegraphics[height=1.6cm]{Tecnico Lisbon Logo.jpg}}}{%
+\IfFileExists{Tecnico Lisbon Logo.png}{\titlegraphic{\includegraphics[height=1.6cm]{Tecnico Lisbon Logo.png}}}{%
+\IfFileExists{tecnico.jpg}{\titlegraphic{\includegraphics[height=1.6cm]{tecnico.jpg}}}{%
+\IfFileExists{logo.jpg}{\titlegraphic{\includegraphics[height=1.6cm]{logo.jpg}}}{%
+\IfFileExists{../presentation 2/Tecnico Lisbon Logo.jpg}{\titlegraphic{\includegraphics[height=1.6cm]{../presentation 2/Tecnico Lisbon Logo.jpg}}}{}}}}}
 
 \begin{document}
 
