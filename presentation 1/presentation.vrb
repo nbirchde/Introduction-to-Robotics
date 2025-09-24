@@ -1,0 +1,21 @@
+\frametitle{Immediate Next Steps}
+\begin{block}{1. EKF Configuration Debugging}
+\begin{itemize}
+    \item Add IMU data to EKF configuration
+    \item Tune sensor noise parameters
+    \item Verify frame ID consistency across all sensors
+    \item Enable additional state variables if needed
+\end{itemize}
+\end{block}
+
+\begin{block}{2. Enhanced Configuration}
+\begin{verbatim}
+<!-- Add IMU configuration -->
+<param name="imu0" value="/imu"/>
+<rosparam param="imu0_config">
+  [false, false, false, true, true, true,
+   false, false, false, true, true, true,
+   false, false, false]
+</rosparam>
+\end{verbatim}
+\end{block}

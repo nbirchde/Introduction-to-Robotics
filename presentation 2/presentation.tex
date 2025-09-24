@@ -1,0 +1,154 @@
+\documentclass[10pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows,shapes,positioning}
+
+% Title page information
+\title[Robot Localization with ROS]{\texorpdfstring{Robot Localization with ROS: \\Final Presentation (Steps 1–3)}{Robot Localization with ROS: Final Presentation (Steps 1–3)}}
+\subtitle{Mini-Project 1 Final Report}
+\author{Nicholas Birch de la Calle (IST1116701) \\
+Antonio Maria Trigueiros de Arag\~{a}o Moura Coutinho (IST196837) \\
+Gabriel Badan (IST1116537) \\
+Jana\'{\i}na da Silva Pacheco (IST1117233)}
+\institute{Instituto Superior Técnico}
+\date{September 24, 2025}
+
+% Title graphic (IST/Técnico logo) — tries common filenames; skips if not found
+\IfFileExists{Tecnico Lisbon Logo.jpg}{\titlegraphic{\includegraphics[height=1.2cm]{Tecnico Lisbon Logo.jpg}}}{%%
+\IfFileExists{tecnico.jpg}{\titlegraphic{\includegraphics[height=1.2cm]{tecnico.jpg}}}{%%
+\IfFileExists{logo.jpg}{\titlegraphic{\includegraphics[height=1.2cm]{logo.jpg}}}{}}}
+
+\begin{document}
+
+% Title slide
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Outline
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+% Team & scope
+\section{Team \& Scope}
+
+\begin{frame}{Scope for This Week}
+\begin{itemize}
+    \item \textbf{Step 1 (Done):} Compare \texttt{/odom} and \texttt{/odometry/filtered} against mocap ground truth
+    \item \textbf{Step 2 (In progress):} Built a map from the real robot; created a playback \texttt{.bag}
+    \item \textbf{Step 3 (Planned):} Navigation on the built map (AMCL + move\_base) with simple waypoint demo
+    \item Same workflow: short syncs, shared checklist, pair-debug on TF/time alignment
+\end{itemize}
+\end{frame}
+
+% Step 1: GT comparison
+\section{Step 1: Ground Truth Comparison}
+
+\begin{frame}{What We Compared (Method)}
+\begin{itemize}
+    \item Topics: \texttt{/odom} (wheel odom), \texttt{/odometry/filtered} (EKF), mocap ground truth in TF
+    \item Aligned frames: \texttt{odom} as fixed frame; mocap link chained via provided TF to \texttt{base\_footprint}
+    \item Time-sync: used rosbag timestamps; checked for TF extrapolation and IMU delays
+    \item Metrics: lateral/longitudinal error and heading error over time; simple RMSE summary
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Results (Simple Takeaways)}
+\begin{itemize}
+    \item \textbf{Tracking:} EKF \texttt{/odometry/filtered} follows mocap closely; reduces wheel-odom drift
+    \item \textbf{Turns:} Largest error spikes during fast yaw rotations (IMU bias not fully compensated)
+    \item \textbf{Numbers:} Example RMSE (x,y): \textit{[fill in]} m; heading RMSE: \textit{[fill in]} deg
+    \item \textbf{Bottom line:} EKF improves consistency and stability vs raw odometry
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Trajectories vs Ground Truth}
+\begin{center}
+\IfFileExists{gt_compare.png}{\includegraphics[width=0.9\textwidth]{gt_compare.png}}{\textit{[Insert trajectory plot: mocap (black), odom (orange), filtered (red)]}}
+
+\vspace{2mm}
+{\scriptsize Fixed Frame: \texttt{odom}; Data source: recorded rosbag from the TurtleBot3}}
+\end{center}
+\end{frame}
+
+% Step 2: Mapping
+\section{Step 2: Mapping (SLAM)}
+
+\begin{frame}{Mapping Pipeline}
+\begin{itemize}
+    \item Inputs: \texttt{/scan}, \texttt{/tf}, \texttt{/odom} (filtered odom optional for stability)
+    \item Tool: \texttt{gmapping} (2D occupancy grid)
+    \item Procedure: teleop + slow loops; then saved map and a playback bag containing map + robot motion
+    \item Validation: visualized map in RViz; checked TF continuity during playback
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Resulting Map (Preview)}
+\begin{center}
+\IfFileExists{map.png}{\includegraphics[width=0.88\textwidth]{map.png}}{\textit{[Insert occupancy grid screenshot with robot trajectory]}}
+
+\vspace{2mm}
+{\scriptsize Resolution: \textit{[fill in]} m/px; Area covered: \textit{[fill in]} m$^2$; Loop closures: \textit{[observed/rare]}}
+\end{center}
+\end{frame}
+
+\begin{frame}{Playback Bag and Demo}
+\begin{itemize}
+    \item Created a \texttt{.bag} with map and robot playback for reproducible demos
+    \item Makes it easy to re-run RViz overlays and evaluate localization on the fixed map
+    \item \textbf{Next:} Use this bag to test AMCL and compare pose vs ground truth trajectory
+\end{itemize}
+\begin{center}
+\IfFileExists{bag_playback.png}{\includegraphics[width=0.8\textwidth]{bag_playback.png}}{\textit{[Optional: insert screenshot of playback]}}
+\end{center}
+\end{frame}
+
+% Step 3 plan
+\section{Step 3: Navigation Plan}
+
+\begin{frame}{What We Will Deliver}
+\begin{itemize}
+    \item \textbf{Localization on Map:} AMCL tuned with correct laser/TF frames
+    \item \textbf{Navigation:} \texttt{move\_base} with simple global/local planners; 2–3 waypoint demo
+    \item \textbf{Safety:} costmap inflation + obstacle layer; conservative speeds
+    \item \textbf{Evaluation:} path tracking error vs planned path; success rate on short routes
+\end{itemize}
+\end{frame}
+
+% Conclusion
+\section{Conclusion}
+
+\begin{frame}{Final Remarks}
+\begin{block}{Progress Summary}
+Step 1 completed with mocap comparison; Step 2 mapping underway with a usable occupancy grid and playback bag.
+\end{block}
+
+\begin{block}{Next Steps}
+\begin{enumerate}
+    \item Fill in quantitative RMSE numbers and insert figures
+    \item Bring up AMCL + move\_base on the saved map
+    \item Record short navigation demo and summarize tracking error
+\end{enumerate}
+\end{block}
+
+\begin{center}
+\Large \textbf{Thank you for your attention!} \\
+\vspace{0.5cm}
+\normalsize Questions?
+\end{center}
+\end{frame}
+
+\end{document}
