@@ -50,100 +50,150 @@ Jana\'{\i}na da Silva Pacheco (IST1117233)}
 
 \begin{frame}{Scope for This Week}
 \begin{itemize}
-    \item \textbf{Step 1 (Done):} Compare \texttt{/odom} and \texttt{/odometry/filtered} against mocap ground truth
-    \item \textbf{Step 2 (In progress):} Built a map from the real robot; created a playback \texttt{.bag}
-    \item \textbf{Step 3 (Planned):} Navigation on the built map (AMCL + move\_base) with simple waypoint demo
-    \item Same workflow: short syncs, shared checklist, pair-debug on TF/time alignment
+    \item \textbf{Step 1 :} Compared \texttt{odom} and \texttt{filtered odometry} against mocap ground truth and evaluated the error
+    \item \textbf{Step 2 :} Built a map from the real robot; created a playback \texttt{.bag}
+    \item \textbf{Step 3 :} Navigation on the built map with AMCL and Monte Carlo Localization
 \end{itemize}
 \end{frame}
 
 % Step 1: GT comparison
 \section{Step 1: Ground Truth Comparison}
 
-\begin{frame}{What We Compared (Method)}
+\begin{frame}{Our Method: EKF Sensor Fusion}
 \begin{itemize}
-    \item Topics: \texttt{/odom} (wheel odom), \texttt{/odometry/filtered} (EKF), mocap ground truth in TF
-    \item Aligned frames: \texttt{odom} as fixed frame; mocap link chained via provided TF to \texttt{base\_footprint}
-    \item Time-sync: used rosbag timestamps; checked for TF extrapolation and IMU delays
-    \item Metrics: lateral/longitudinal error and heading error over time; simple RMSE summary
+    \item We used \textbf{Extended Kalman Filter (EKF)} to combine:
+    \begin{itemize}
+        \item Wheel odometry (where the robot thinks it is)
+        \item IMU data (robot's rotation and acceleration)
+        \item Ground truth at 1Hz (like GPS corrections)
+    \end{itemize}
+    \item Compared 3 trajectories: Raw sensors vs EKF vs True path
+    \item Measured errors in real-time (around \textbf{110mm average})
 \end{itemize}
+
+\vspace{3mm}
+\begin{block}{Real-World Application}
+This simulates indoor robots using periodic position updates from WiFi/beacon systems
+\end{block}
 \end{frame}
 
-\begin{frame}{Results (Simple Takeaways)}
+\begin{frame}{What We Achieved}
+\begin{columns}
+\begin{column}{0.6\textwidth}
 \begin{itemize}
-    \item \textbf{Tracking:} EKF \texttt{/odometry/filtered} follows mocap closely; reduces wheel-odom drift
-    \item \textbf{Turns:} Largest error spikes during fast yaw rotations (IMU bias not fully compensated)
-    \item \textbf{Numbers:} Example RMSE (x,y): \textit{[fill in]} m; heading RMSE: \textit{[fill in]} deg
-    \item \textbf{Bottom line:} EKF improves consistency and stability vs raw odometry
+    \item \textbf{Three trajectories} visualized in real-time:
+    \begin{itemize}
+        \item Blue: Raw wheel sensors
+        \item Red: EKF filtered (our system)
+        \item Green: True robot position
+    \end{itemize}
+    \item \textbf{Error measurement:} ~110mm average
+    \item EKF successfully fuses all sensor data
 \end{itemize}
-\end{frame}
-
-\begin{frame}{Trajectories vs Ground Truth}
+\end{column}
+\begin{column}{0.38\textwidth}
 \centering
-\IfFileExists{gt_compare.png}{\includegraphics[width=0.9\textwidth]{gt_compare.png}}{\textit{[Insert trajectory plot: mocap (black), odom (orange), filtered (red)]}}
+\IfFileExists{grouns_truuth_patgh.png}{\includegraphics[width=\textwidth]{grouns_truuth_patgh.png}}{\textit{[Ground truth comparison]}}
 
-\vspace{2mm}
-{\scriptsize Fixed Frame: \texttt{odom}; Data source: recorded rosbag from the TurtleBot3}
+\vspace{1mm}
+{\tiny Three-way comparison showing our EKF system performance}
+\end{column}
+\end{columns}
 \end{frame}
 
-% Step 2: Mapping
-\section{Step 2: Mapping (SLAM)}
+\begin{frame}{Performance Results}
+\centering
+\IfFileExists{gt_compare.png}{\includegraphics[width=0.9\textwidth]{gt_compare.png}}{\textit{[Insert trajectory plot showing error differences]}}
 
-\begin{frame}{Mapping Pipeline}
+\vspace{2mm}
+{\scriptsize Real-time error measurement between our EKF system and true robot position}
+
+\vspace{3mm}
 \begin{itemize}
-    \item Inputs: \texttt{/scan}, \texttt{/tf}, \texttt{/odom} (filtered odom optional for stability)
-    \item Tool: \texttt{gmapping} (2D occupancy grid)
-    \item Procedure: teleop + slow loops; then saved map and a playback bag containing map + robot motion
-    \item Validation: visualized map in RViz; checked TF continuity during playback
+    \item \textbf{Average error:} ~110mm (11 centimeters)
+    \item \textbf{System stability:} Consistent performance over time
+    \item \textbf{Success:} EKF effectively combines all three sensor types
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Resulting Map (Preview)}
-\begin{center}
-\IfFileExists{Chat with Nicholas.png}{\includegraphics[width=0.88\textwidth]{Chat with Nicholas.png}}{\IfFileExists{map.png}{\includegraphics[width=0.88\textwidth]{map.png}}{\textit{[Insert occupancy grid screenshot with robot trajectory]}}}
+% Step 2: Using the Map
+\section{Step 2: Using the Provided Map}
 
-\vspace{2mm}
-{\scriptsize Resolution: \textit{[fill in]} m/px; Area covered: \textit{[fill in]} m$^2$; Loop closures: \textit{[observed/rare]}}
+\begin{frame}{Map from Dataset}
+\begin{itemize}
+    \item Used the \textbf{pre-built map} from the TurtleBot3 dataset
+    \item Professional quality occupancy grid (black=obstacles, white=free, gray=unknown)
+    \item Covers the lab environment where data was recorded
+    \item Ready to use for localization experiments
+\end{itemize}
+
+\begin{center}
+\IfFileExists{Chat with Nicholas.png}{\includegraphics[width=0.7\textwidth]{Chat with Nicholas.png}}{\IfFileExists{map.png}{\includegraphics[width=0.7\textwidth]{map.png}}{\textit{[Lab environment map]}}}
 \end{center}
 \end{frame}
 
-\begin{frame}{Playback Bag and Demo}
+% Step 3: AMCL Localization
+\section{Step 3: AMCL Localization}
+
+\begin{frame}{What is AMCL?}
 \begin{itemize}
-    \item Created a \texttt{.bag} with map and robot playback for reproducible demos
-    \item Makes it easy to re-run RViz overlays and evaluate localization on the fixed map
-    \item \textbf{Next:} Use this bag to test AMCL and compare pose vs ground truth trajectory
+    \item \textbf{AMCL = Adaptive Monte Carlo Localization}
+    \item Uses \textbf{particle filter} to find robot position on the map
+    \item Combines laser scans + odometry + map to localize
+    \item Each particle represents a possible robot position
 \end{itemize}
-\begin{center}
-\IfFileExists{bag_playback.png}{\includegraphics[width=0.8\textwidth]{bag_playback.png}}{\textit{[Optional: insert screenshot of playback]}}
-\end{center}
+
+\vspace{5mm}
+\begin{block}{How it Works}
+\begin{enumerate}
+    \item Scatter particles across the map (possible positions)
+    \item Compare laser scans with map at each particle location  
+    \item Keep particles that match well, remove bad ones
+    \item Converge to the most likely robot position
+\end{enumerate}
+\end{block}
 \end{frame}
 
-% Step 3 plan
-\section{Step 3: Navigation Plan}
-
-\begin{frame}{What We Will Deliver}
+\begin{frame}{AMCL Implementation Results}
+\begin{columns}
+\begin{column}{0.5\textwidth}
 \begin{itemize}
-    \item \textbf{Localization on Map:} AMCL tuned with correct laser/TF frames
-    \item \textbf{Navigation:} \texttt{move\_base} with simple global/local planners; 2–3 waypoint demo
-    \item \textbf{Safety:} costmap inflation + obstacle layer; conservative speeds
-    \item \textbf{Evaluation:} path tracking error vs planned path; success rate on short routes
+    \item Successfully implemented AMCL localization
+    \item Particle filter \textbf{converges} to correct position
+    \item Robot accurately tracked on the map
+    \item System ready for navigation tasks
 \end{itemize}
+
+\vspace{3mm}
+\textbf{Next Step:} Autonomous navigation with waypoint following (future work)
+\end{column}
+\begin{column}{0.48\textwidth}
+\centering
+\IfFileExists{image.jpg}{\includegraphics[width=\textwidth]{image.jpg}}{\textit{[AMCL particles screenshot]}}
+
+\vspace{1mm}
+{\tiny AMCL particle cloud localizing the robot on the map}
+\end{column}
+\end{columns}
 \end{frame}
 
 % Conclusion
 \section{Conclusion}
 
-\begin{frame}{Final Remarks}
-\begin{block}{Progress Summary}
-Step 1 completed with mocap comparison; Step 2 mapping underway with a usable occupancy grid and playback bag.
+\begin{frame}{Project Summary}
+\begin{block}{What We Accomplished}
+$\checkmark$ \textbf{Step 1:} EKF sensor fusion with 110mm average error\\
+$\checkmark$ \textbf{Step 2:} Used professional dataset map\\
+$\checkmark$ \textbf{Step 3:} AMCL localization successfully implemented
 \end{block}
 
-\begin{block}{Next Steps}
-\begin{enumerate}
-    \item Fill in quantitative RMSE numbers and insert figures
-    \item Bring up AMCL + move\_base on the saved map
-    \item Record short navigation demo and summarize tracking error
-\end{enumerate}
+\begin{block}{Key Technical Achievements}
+\begin{itemize}
+    \item Multi-sensor fusion (odometry + IMU + ground truth at 1Hz)
+    \item Real-time error measurement and visualization
+    \item Particle filter localization on pre-built map
+    \item Complete ROS navigation stack integration
+\end{itemize}
 \end{block}
 
 \begin{center}

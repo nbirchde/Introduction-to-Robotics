@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.19)  24 SEP 2025 17:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.19)  25 SEP 2025 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -882,7 +882,7 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 [2
 
 ]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 58--58
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 57--57
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
@@ -896,7 +896,7 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 [3
 
 ]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 70--70
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 78--78
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
@@ -910,10 +910,27 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 [4
 
 ]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 79--79
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 102--102
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
+LaTeX Font Info:    Trying to load font information for U+msa on input line 102.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 102.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 102.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
+)
+<grouns_truuth_patgh.png, id=111, 1437.37pt x 1345.025pt>
+File: grouns_truuth_patgh.png Graphic file (type png)
+<use grouns_truuth_patgh.png>
+Package pdftex.def Info: grouns_truuth_patgh.png  used on input line 102.
+(pdftex.def)             Requested size: 130.7959pt x 122.38104pt.
 
 
 
@@ -923,8 +940,8 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 
 [5
 
-]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 87--87
+ <./grouns_truuth_patgh.png>]
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 117--117
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
@@ -938,10 +955,15 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 [6
 
 ]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 99--99
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 133--133
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
+<Chat with Nicholas.png, id=127, 1927.2pt x 1084.05pt>
+File: Chat with Nicholas.png Graphic file (type png)
+<use Chat with Nicholas.png>
+Package pdftex.def Info: Chat with Nicholas.png  used on input line 133.
+(pdftex.def)             Requested size: 240.93567pt x 135.52246pt.
 
 
 
@@ -951,28 +973,12 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 
 [7
 
-]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 108--108
+ <./Chat with Nicholas.png>]
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 155--155
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
-<Chat with Nicholas.png, id=117, 1927.2pt x 1084.05pt>
-File: Chat with Nicholas.png Graphic file (type png)
-<use Chat with Nicholas.png>
-Package pdftex.def Info: Chat with Nicholas.png  used on input line 108.
-(pdftex.def)             Requested size: 302.89355pt x 170.37486pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 108.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 108.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 108.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-)
+
 
 
 Overfull \hbox (344.05844pt too wide) has occurred while \output is active
@@ -981,11 +987,16 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 
 [8
 
- <./Chat with Nicholas.png>]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 119--119
+]
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 178--178
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
+<image.jpg, id=155, 1174.3875pt x 1273.75874pt>
+File: image.jpg Graphic file (type jpg)
+<use image.jpg>
+Package pdftex.def Info: image.jpg  used on input line 178.
+(pdftex.def)             Requested size: 165.21228pt x 179.18019pt.
 
 
 
@@ -995,8 +1006,8 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 
 [9
 
-]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 131--131
+ <./image.jpg>]
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 204--204
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
@@ -1008,20 +1019,6 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
  []
 
 [10
-
-]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 154--154
- [][]  \OT1/cmss/m/n/5 ([])  
- []
-
-
-
-
-Overfull \hbox (344.05844pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/5 ([])  
- []
-
-[11
 
 ]
 \tf@nav=\write6
@@ -1039,21 +1036,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 1F1D8E9BECDA2160F0EA6CCA533C41CD;750.
+(rerunfilecheck)             Checksum: 6946B7680EC198622069179EB728F526;800.
  ) 
 Here is how much of TeX's memory you used:
- 37269 strings out of 473190
- 906736 string characters out of 5715800
- 1383882 words of memory out of 5000000
- 59817 multiletter control sequences out of 15000+600000
- 564368 words of font info for 56 fonts, out of 8000000 for 9000
+ 37333 strings out of 473190
+ 908842 string characters out of 5715800
+ 1384882 words of memory out of 5000000
+ 59881 multiletter control sequences out of 15000+600000
+ 564963 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,123p,809b,874s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on presentation.pdf (11 pages, 402898 bytes).
+ 128i,16n,123p,809b,882s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on presentation.pdf (10 pages, 1240912 bytes).
 PDF statistics:
- 216 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 313 words of extra memory for PDF output out of 10000 (max. 10000000)
 

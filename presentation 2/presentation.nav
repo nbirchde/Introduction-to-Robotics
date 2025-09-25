@@ -18,25 +18,23 @@
 \headcommand {\beamer@framepages {6}{6}}
 \headcommand {\beamer@sectionpages {4}{6}}
 \headcommand {\beamer@subsectionpages {4}{6}}
-\headcommand {\sectionentry {3}{Step 2: Mapping (SLAM)}{7}{Step 2: Mapping (SLAM)}{0}}
+\headcommand {\sectionentry {3}{Step 2: Using the Provided Map}{7}{Step 2: Using the Provided Map}{0}}
 \headcommand {\slideentry {3}{0}{1}{7/7}{}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {3}{0}{2}{8/8}{}{0}}
+\headcommand {\beamer@sectionpages {7}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\sectionentry {4}{Step 3: AMCL Localization}{8}{Step 3: AMCL Localization}{0}}
+\headcommand {\slideentry {4}{0}{1}{8/8}{}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {3}{0}{3}{9/9}{}{0}}
+\headcommand {\slideentry {4}{0}{2}{9/9}{}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@sectionpages {7}{9}}
-\headcommand {\beamer@subsectionpages {7}{9}}
-\headcommand {\sectionentry {4}{Step 3: Navigation Plan}{10}{Step 3: Navigation Plan}{0}}
-\headcommand {\slideentry {4}{0}{1}{10/10}{}{0}}
+\headcommand {\beamer@sectionpages {8}{9}}
+\headcommand {\beamer@subsectionpages {8}{9}}
+\headcommand {\sectionentry {5}{Conclusion}{10}{Conclusion}{0}}
+\headcommand {\slideentry {5}{0}{1}{10/10}{}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\beamer@sectionpages {10}{10}}
+\headcommand {\beamer@partpages {1}{10}}
 \headcommand {\beamer@subsectionpages {10}{10}}
-\headcommand {\sectionentry {5}{Conclusion}{11}{Conclusion}{0}}
-\headcommand {\slideentry {5}{0}{1}{11/11}{}{0}}
-\headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@partpages {1}{11}}
-\headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\beamer@sectionpages {11}{11}}
-\headcommand {\beamer@documentpages {11}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\beamer@sectionpages {10}{10}}
+\headcommand {\beamer@documentpages {10}}
+\headcommand {\gdef \inserttotalframenumber {10}}
