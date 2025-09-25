@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Team \& Scope}{3}{0}{1}
 \beamer@sectionintoc {2}{Step 1: Ground Truth Comparison}{4}{0}{2}
-\beamer@sectionintoc {3}{Step 2: Using the Provided Map}{7}{0}{3}
+\beamer@sectionintoc {3}{Step 2: Building the Map with gmapping}{6}{0}{3}
 \beamer@sectionintoc {4}{Step 3: AMCL Localization}{8}{0}{4}
 \beamer@sectionintoc {5}{Conclusion}{10}{0}{5}

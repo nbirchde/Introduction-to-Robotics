@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.19)  25 SEP 2025 17:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.19)  25 SEP 2025 17:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -941,7 +941,7 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 [5
 
  <./grouns_truuth_patgh.png>]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 117--117
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 125--125
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
@@ -954,15 +954,15 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 
 [6
 
-]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 133--133
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 138--138
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
-<Chat with Nicholas.png, id=127, 1927.2pt x 1084.05pt>
+<Chat with Nicholas.png, id=140, 1927.2pt x 1084.05pt>
 File: Chat with Nicholas.png Graphic file (type png)
 <use Chat with Nicholas.png>
-Package pdftex.def Info: Chat with Nicholas.png  used on input line 133.
+Package pdftex.def Info: Chat with Nicholas.png  used on input line 138.
 (pdftex.def)             Requested size: 240.93567pt x 135.52246pt.
 
 
@@ -974,7 +974,7 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 [7
 
  <./Chat with Nicholas.png>]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 155--155
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 160--160
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
@@ -988,14 +988,14 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 [8
 
 ]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 178--178
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 183--183
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
-<image.jpg, id=155, 1174.3875pt x 1273.75874pt>
+<image.jpg, id=167, 1174.3875pt x 1273.75874pt>
 File: image.jpg Graphic file (type jpg)
 <use image.jpg>
-Package pdftex.def Info: image.jpg  used on input line 178.
+Package pdftex.def Info: image.jpg  used on input line 183.
 (pdftex.def)             Requested size: 165.21228pt x 179.18019pt.
 
 
@@ -1007,7 +1007,7 @@ Overfull \hbox (344.05844pt too wide) has occurred while \output is active
 [9
 
  <./image.jpg>]
-Overfull \hbox (344.05844pt too wide) in paragraph at lines 204--204
+Overfull \hbox (344.05844pt too wide) in paragraph at lines 209--209
  [][]  \OT1/cmss/m/n/5 ([])  
  []
 
@@ -1036,21 +1036,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 6946B7680EC198622069179EB728F526;800.
+(rerunfilecheck)             Checksum: AF796047ED5FF5A5BCF3CB300D89D461;843.
  ) 
 Here is how much of TeX's memory you used:
- 37333 strings out of 473190
- 908842 string characters out of 5715800
+ 37339 strings out of 473190
+ 909097 string characters out of 5715800
  1384882 words of memory out of 5000000
- 59881 multiletter control sequences out of 15000+600000
- 564963 words of font info for 58 fonts, out of 8000000 for 9000
+ 59886 multiletter control sequences out of 15000+600000
+ 564948 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,123p,809b,882s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on presentation.pdf (10 pages, 1240912 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb>
+Output written on presentation.pdf (10 pages, 1235452 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
+ 250 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  26 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 349 words of extra memory for PDF output out of 10000 (max. 10000000)
 

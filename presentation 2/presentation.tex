@@ -101,30 +101,35 @@ This simulates indoor robots using periodic position updates from WiFi/beacon sy
 \end{columns}
 \end{frame}
 
-\begin{frame}{Performance Results}
-\centering
-\IfFileExists{gt_compare.png}{\includegraphics[width=0.9\textwidth]{gt_compare.png}}{\textit{[Insert trajectory plot showing error differences]}}
+% Step 2: Using the Map
+\section{Step 2: Building the Map with gmapping}
 
-\vspace{2mm}
-{\scriptsize Real-time error measurement between our EKF system and true robot position}
+\begin{frame}{How gmapping Works}
+\begin{itemize}
+    \item \textbf{gmapping = SLAM algorithm} (Simultaneous Localization and Mapping)
+    \item Uses \textbf{particle filter} where each particle represents a possible robot path
+    \item Each particle builds its own version of the map as it moves
+    \item \textbf{Laser scans} detect walls and obstacles
+    \item \textbf{Wheel odometry} estimates robot movement between scans
+\end{itemize}
 
 \vspace{3mm}
-\begin{itemize}
-    \item \textbf{Average error:} ~110mm (11 centimeters)
-    \item \textbf{System stability:} Consistent performance over time
-    \item \textbf{Success:} EKF effectively combines all three sensor types
-\end{itemize}
+\begin{block}{The Process}
+\begin{enumerate}
+    \item Robot drives around unknown environment
+    \item Laser continuously scans surroundings (360°)
+    \item Algorithm builds map while tracking robot position
+    \item Final result: Complete occupancy grid map
+\end{enumerate}
+\end{block}
 \end{frame}
 
-% Step 2: Using the Map
-\section{Step 2: Using the Provided Map}
-
-\begin{frame}{Map from Dataset}
+\begin{frame}{Building the Map}
 \begin{itemize}
-    \item Used the \textbf{pre-built map} from the TurtleBot3 dataset
-    \item Professional quality occupancy grid (black=obstacles, white=free, gray=unknown)
-    \item Covers the lab environment where data was recorded
-    \item Ready to use for localization experiments
+    \item Built the map using \textbf{live data collection} with the TurtleBot3 robot
+    \item Used gmapping SLAM to create occupancy grid from laser scans
+    \item Robot navigated the lab environment while simultaneously mapping
+    \item Generated map saved for subsequent localization experiments
 \end{itemize}
 
 \begin{center}
