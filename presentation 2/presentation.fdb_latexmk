@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1758818529.17412 "/Users/nicholasbirchdelacalle/Documents/IRob/mini_project1/presentation 2/presentation.tex" "presentation.pdf" "presentation" 1758818530.46042 0
-  "/Users/nicholasbirchdelacalle/Documents/IRob/mini_project1/presentation 2/presentation.tex" 1758818527.65832 7357 711485f266c0ffa4866e0f5759862ebf ""
+["pdflatex"] 1758875949.07303 "/Users/nicholasbirchdelacalle/Documents/IRob/mini_project1/presentation 2/presentation.tex" "presentation.pdf" "presentation" 1758875950.38411 0
+  "/Users/nicholasbirchdelacalle/Documents/IRob/mini_project1/presentation 2/presentation.tex" 1758875948.90518 7331 83f616ca858788c268065aa6aa384785 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcss1000.tfm" 1136768653 1536 293044035fd171bb1d18cf655049b101 ""
@@ -269,11 +269,11 @@
   "Tecnico Lisbon Logo.jpg" 1758723941.78441 51941 2a704eaeacc75ca094779cc7a9ff9078 ""
   "grouns_truuth_patgh.png" 1758812846.10843 753662 9a5149aa363259da7a7c516e05094544 ""
   "image.jpg" 1758817664.68919 119619 d3e5c2e67619e301238cf19dd4db62fe ""
-  "presentation.aux" 1758818530.4083 3276 3bcae91566b550047cd97f6a5d1cc801 "pdflatex"
-  "presentation.nav" 1758818530.40895 2005 b3f0ce54c117977ee32274e8bd65a23d "pdflatex"
-  "presentation.out" 1758818530.4088 843 af796047ed5ff5a5bcf3cb300d89d461 "pdflatex"
-  "presentation.tex" 1758818527.65832 7357 711485f266c0ffa4866e0f5759862ebf ""
-  "presentation.toc" 1758818530.40897 298 f16990218b76d496c550ac426acb8e31 "pdflatex"
+  "presentation.aux" 1758875950.32707 3276 3bcae91566b550047cd97f6a5d1cc801 "pdflatex"
+  "presentation.nav" 1758875950.32775 2005 b3f0ce54c117977ee32274e8bd65a23d "pdflatex"
+  "presentation.out" 1758875950.32759 843 af796047ed5ff5a5bcf3cb300d89d461 "pdflatex"
+  "presentation.tex" 1758875948.90518 7331 83f616ca858788c268065aa6aa384785 ""
+  "presentation.toc" 1758875950.32777 298 f16990218b76d496c550ac426acb8e31 "pdflatex"
   (generated)
   "presentation.aux"
   "presentation.log"
